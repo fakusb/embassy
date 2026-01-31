@@ -166,7 +166,7 @@ cfg-if = "1.0.0"
 cortex-m-rt = ">=0.6.15,<0.8"
 cortex-m = "0.7.6"
 critical-section = "1.2.0"
-chrono = { version = "0.4", default-features = false, optional = true }
+chrono = { version = "0.4.43", default-features = false, optional = true }
 embedded-io = { version = "0.6.1" }
 embedded-io-async = { version = "0.6.1" }
 embedded-storage = { version = "0.3" }
