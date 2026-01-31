@@ -58,7 +58,7 @@ pub enum DayOfWeek {
     Saturday = 6,
 }
 
-fn day_of_week_from_u8(v: u8) -> Result<DayOfWeek, Error> {
+pub(super) fn day_of_week_from_u8(v: u8) -> Result<DayOfWeek, Error> {
     Ok(match v {
         0 => DayOfWeek::Sunday,
         1 => DayOfWeek::Monday,

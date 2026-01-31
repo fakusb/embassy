@@ -24,6 +24,19 @@ pub(super) fn day_of_week_to_u8(dotw: DayOfWeek) -> u8 {
     dotw.num_days_from_sunday() as u8
 }
 
+pub(super) fn day_of_week_from_u8(dotw: u8) -> Result<DayOfWeek,()> {
+    match dotw {
+            0 => Ok(DayOfWeek::Sun),
+            1 => Ok(DayOfWeek::Mon),
+            2 => Ok(DayOfWeek::Tue),
+            3 => Ok(DayOfWeek::Wed),
+            4 => Ok(DayOfWeek::Thu),
+            5 => Ok(DayOfWeek::Fri),
+            6 => Ok(DayOfWeek::Sat),
+            _ => Err(()), // Invalid day of week
+        }
+}
+
 pub(crate) fn validate_datetime(dt: &DateTime) -> Result<(), Error> {
     if dt.year() < 0 || dt.year() > 4095 {
         // rp2040 can't hold these years
